@@ -22,7 +22,7 @@ mongoose.connect(process.env.MONGO_CONNECTION)
     
   });
 app.use(express.static(path.resolve(__dirname,"build")))
-app.use(cors({origin:"http://localhost:3000"}));
+app.use(cors());
 app.use("/api",auth)
 app.use("/api",user)
 app.use("/api/products",productroute)
